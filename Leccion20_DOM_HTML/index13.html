@@ -1,0 +1,37 @@
+<!--eventos onfocus y onblur -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejemplo formularios con JavaScript</title>
+    <!-- <link rel="shortcut icon" href="">  -->    
+</head>
+<body>
+    <h1 id= 'titulo'>
+        Manejo de DOM con JavaScript
+    </h1> 
+    
+    <br/>
+
+    nombre <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"/>
+    <br/><br/>
+    apellido <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"/>
+    <script> 
+    
+          function cambiar(elementoInput){
+              elementoInput.style.background = 'yellow';
+          }
+
+          function regresar(elementoInput){
+              elementoInput.style.background = 'white';
+          }
+    
+    
+    
+
+    </script>  
+
+    
+</body>
+</html>

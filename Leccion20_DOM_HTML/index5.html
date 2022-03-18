@@ -1,0 +1,27 @@
+<!--cambio de valor atributos-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejemplo formularios con JavaScript</title>
+    <!-- <link rel="shortcut icon" href="">  -->    
+</head>
+<body>
+    <h1 id='titulo'>Manejo DOM con JavaScript</h1>
+    <button onClick="cambiarImagen()">Cambiar Imagen</button>
+    <br/>
+    <img id='imagen' src='https://globalmentoring.com.mx/imagenes/javascript.png'>
+    <script>
+  
+
+        function cambiarImagen(){
+            document.getElementById('imagen').src = 'https://globalmentoring.com.mx/imagenes/html5.png';
+        }
+
+
+    </script>  
+
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!--metodo addEventListenner hacer lo mismo que lo anterior pero desde javascript -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejemplo formularios con JavaScript</title>
+    <!-- <link rel="shortcut icon" href="">  -->    
+</head>
+<body>
+    <h1 id= 'titulo'>
+        Manejo de DOM con JavaScript
+    </h1> 
+    
+    <br/>
+
+    nombre <input id="nombre" type="text" />
+    <br/><br/>
+    apellido <input id="apellido" type="text"/>
+    <script> 
+
+    // addevenlistener para agregar uno o mas eventos al elemento que estamos recuperando, se quita el on del evento
+
+
+              // funciones de tipo calback = cambiar y regresar
+
+
+          document.getElementById('nombre').addEventListener('focus', cambiar);
+          document.getElementById('nombre').addEventListener('blur', regresar);
+
+          document.getElementById('apellido').addEventListener('focus', cambiar);
+          document.getElementById('apellido').addEventListener('blur', regresar);
+    
+          function cambiar(evento){
+            
+             // evento.target.style.background = 'yellow';
+              let componente = evento.target;
+              componente.style.background = 'yellow';
+          }
+
+          function regresar(evento){
+
+              evento.target.style.background = 'white';
+              
+          }    
+
+    </script>  
+
+    
+</body>
+</html>

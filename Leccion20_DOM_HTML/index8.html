@@ -1,0 +1,31 @@
+<!--asociar eventos a elementos -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejemplo formularios con JavaScript</title>
+    <!-- <link rel="shortcut icon" href="">  -->    
+</head>
+<body>
+    <h1 id= 'titulo'>Manejo de eventos en DOM con JavaScript</h1> 
+    
+    <br/>
+
+    <div id="mostrar"></div>
+
+    
+    <script>   
+
+    document.getElementById('titulo').onclick = cambiarTexto;
+
+    function cambiarTexto(){
+        document.getElementById('mostrar').innerHTML = 'Nuevo título';
+    }
+  
+
+    </script>  
+
+    
+</body>
+</html>

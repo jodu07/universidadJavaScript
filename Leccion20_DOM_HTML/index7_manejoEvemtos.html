@@ -1,0 +1,38 @@
+<!--manejo eventos con DOM-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejemplo formularios con JavaScript</title>
+    <!-- <link rel="shortcut icon" href="">  -->    
+</head>
+<body>
+    <h1 onclick=" cambiarTexto(this) ">Manejo de eventos en DOM con JavaScript</h1>
+
+    <h3 onclick=" cambiarColor(this) ">ejemplo cambiar color con eventos</h3>
+    
+    <br/>
+
+    
+    <script>   
+  
+
+        function cambiarTexto(tituloH1){  
+            console.log(tituloH1); 
+            console.log(tituloH1.innerHTML);         
+            tituloH1.innerHTML = 'Nuevo Titulo';   
+            console.log(tituloH1.innerHTML);           
+
+        }
+
+        function cambiarColor(tituloH3){            
+            tituloH3.style.color = 'red';           
+
+        }
+
+    </script>  
+
+    
+</body>
+</html>

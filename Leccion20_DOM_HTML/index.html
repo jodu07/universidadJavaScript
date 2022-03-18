@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejemplo DOM con JavaScript</title>
+    <!-- <link rel="shortcut icon" href="">  -->
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1 id='cabecero' class='azul''> Ejemplo DOM con JavaScript </h1>
+    <p id='parrafo1' class='azul'>Saludos!</p>
+    <p id='parrafo2' class='azul'> Otro Parrafo </p>
+
+    <script>
+        console.log('saludos desde JavaScript');       
+    
+        //nos regresa un objeto del DOM con getElementById
+        // innerHTML para acceder al texto del documento HTML
+
+        let cabecero = document.getElementById('cabecero');
+        let parrafo1 = document.getElementById('parrafo1');
+        console.log(`valor cabecero: ${cabecero.innerHTML}`);         
+        console.log(`este es el texto de parrafo: ${parrafo1.innerHTML}`);
+
+       // parrafo.innerHTML = 'Nuevo valor del parrafo';
+       // console.log(`este es nuevo valor del parrafo: ${parrafo.innerHTML}`);
+       // cabecero.innerHTML = 'Nuevo titulo';
+
+
+       // con getElementsByTagName accedemos a todos los elementos del mismo tipo y los guarda en un arreglo, en este ejemplo a los tipo p = parrafos
+       let parrafos = document.getElementsByTagName('p');
+       console.log( `Numero de párrafos: ${parrafos.length}` );
+
+       for(let i=0; i<parrafos.length; i++){
+           console.log(`parrafo ${i}: ${parrafos[i].innerHTML}`);
+       }
+
+       //---getElementsByClassName: recuperamos elementos por clase
+
+       let elementosAzules = document.getElementsByClassName('azul');
+       console.log( `Elementos azules: ${elementosAzules.length}` );
+/*
+       for(let i=0; i<elementosAzules.length; i++){
+           console.log(`Elemento azul ${i}: ${elementosAzules[i].innerHTML}`);
+       }
+*/
+      //otra fomra de iterar los elementos
+      for(let elemento of elementosAzules){
+          console.log(`Elemento azul: ${elemento.innerHTML}`);
+      }
+
+      //-------querySelectorAll: especifimaos la clase y el elemento que queremos recuperar
+
+      //recuperamos parrafos que sean azules
+
+      let parrafosAzules = document.querySelectorAll('p.azul');
+       console.log( `Párrafos azules: ${parrafosAzules.length}` );
+
+      //otra fomra de iterar los elementos
+      for(let parrafo of parrafosAzules){
+          console.log(`Párrafo azul: ${parrafo.innerHTML}`);
+      }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

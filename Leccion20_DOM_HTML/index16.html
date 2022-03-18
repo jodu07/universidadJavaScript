@@ -1,0 +1,35 @@
+<!-- Delegación de eventos -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Ejemplo formularios con JavaScript</title>
+    <!-- <link rel="shortcut icon" href="">  -->
+  </head>
+  <body>
+    <h1 id="titulo">Manejo de DOM con JavaScript</h1>
+
+    <br />
+
+    <form id="formulario">
+      nombre <input id="nombre" type="text" /> <br /><br />
+      apellido <input id="apellido" type="text" />
+    </form>
+
+    <script>
+
+        // agregar parametro true al final para que el metodo que se aplico a formulario se aplique tambien a los elementos internos en este caso los input
+      const formulario = document.getElementById("formulario");
+
+      formulario.addEventListener("focus", (evento) => {
+        evento.target.style.background = "yellow";
+      }, true);
+
+      formulario.addEventListener("blur", (evento) => {
+        evento.target.style.background = "";
+      }, true);
+
+    </script>
+  </body>
+</html>

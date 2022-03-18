@@ -1,0 +1,38 @@
+<!--eventos onload: se ejecuta cuando se carga la web -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejemplo formularios con JavaScript</title>
+    <!-- <link rel="shortcut icon" href="">  -->    
+</head>
+<body onload="entrar()">
+    <h1 id= 'titulo'>Manejo de eventos en DOM con JavaScript</h1> 
+    
+    <br/>
+
+    <div id= 'mostrar'></div>
+
+    
+    <script>   
+
+
+    function entrar(){
+        alert('Entrando a la pagina web');
+        let texto = '';
+        if(navigator.cookieEnabled){
+            texto = 'cookies están habilitadas';
+            
+        }
+        else{
+            texto = 'cookies están inhabilitadas';
+        }
+        document.getElementById('mostrar').innerHTML = texto;
+    }
+
+    </script>  
+
+    
+</body>
+</html>
